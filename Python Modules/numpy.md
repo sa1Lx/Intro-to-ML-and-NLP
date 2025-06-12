@@ -1,5 +1,5 @@
-// to install numpy: `pip install numpy`<br>
-// to import numpy: `import numpy as np`
+to install numpy: `pip install numpy`<br>
+to import numpy: `import numpy as np`
 
 # Arrays in NumPy
 
