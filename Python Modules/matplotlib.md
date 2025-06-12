@@ -54,7 +54,7 @@ Shows relationships or correlation between two variables.
         plt.ylabel("Y")
         plt.show()
 
-## * Pie Chart
+## Pie Chart
 
 Shows proportions of a whole.
 
