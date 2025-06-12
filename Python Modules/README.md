@@ -12,6 +12,8 @@ NumPy (Numerical Python) is a powerful open-source Python library used for numer
 * Integration: Works seamlessly with other libraries like SciPy, pandas, and matplotlib.
 * Performance: Fast and memory-efficient compared to native Python lists.
 
+More about NumPy at [NumPy Documentation](numpy.md).
+
 # Pandas
 
 Pandas is an open-source Python library used for data manipulation, analysis, and cleaning. It provides easy-to-use data structures and functions, making it a powerful tool for working with structured data.
@@ -27,3 +29,37 @@ Pandas is an open-source Python library used for data manipulation, analysis, an
   * Filtering, sorting, grouping, and aggregation.
   * Merging and joining datasets.
   * Time series support.
+
+More about Pandas at [Pandas Documentation](pandas.md).
+
+# Matplotlib
+
+Matplotlib is a popular Python library used for data visualization. It provides functions for creating a wide range of static, animated, and interactive plots in Python.
+
+## Key Features
+
+* Main Module: matplotlib.pyplot is commonly used for plotting. It works similarly to MATLAB.
+* Basic Plots: Line plots, bar charts, histograms, scatter plots, pie charts, etc.
+* Customization: You can customize titles, labels, legends, colors, and styles.
+* Integration: Works well with NumPy, pandas, and Jupyter notebooks.
+* Interactive Features: Zoom, pan, and save options in plot windows.
+
+More about Matplotlib at [Matplotlib Documentation](matplotlib.md).
+
+# SciKit Learn
+
+Scikit-learn is a powerful and widely-used open-source Python library for machine learning. It provides simple and efficient tools for data mining and data analysis, and is built on top of NumPy, SciPy, and matplotlib.
+
+## Key Features
+
+* Supervised Learning: Supports algorithms like linear regression, logistic regression, decision trees, support vector machines (SVM), and more.
+
+* Unsupervised Learning: Includes clustering (e.g., K-means), dimensionality reduction (e.g., PCA), and others.
+
+* Model Selection: Tools for cross-validation, grid search, and evaluation metrics.
+
+* Preprocessing: Functions for scaling, normalization, encoding categorical features, etc.
+
+* Easy-to-use API: Consistent interface and integration with other Python tools make it beginner-friendly and efficient for rapid development.
+
+More about SciKit Learn at [Scikit-learn Documentation](scikit_learn.md).
