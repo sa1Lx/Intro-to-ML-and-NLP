@@ -3,7 +3,7 @@ to import `import matplotlib.pyplot as plt`
 
 # Different Types Of Plots in Matplotlib
 
-## * Line Plot
+## Line Plot
 
 Used to show trends over time or continuous data.
 
@@ -16,7 +16,7 @@ Used to show trends over time or continuous data.
         plt.ylabel("Y-axis")
         plt.show()
 
-## * Bar Plot
+## Bar Plot
 
 Used to compare categories of data.
 
@@ -29,7 +29,7 @@ Used to compare categories of data.
         plt.ylabel("Values")
         plt.show()
 
-## * Histogram
+## Histogram
 
 Shows the distribution of a dataset
 
@@ -41,7 +41,7 @@ Shows the distribution of a dataset
         plt.ylabel("Frequency")
         plt.show()
 
-## * Scatter Plot
+## Scatter Plot
 
 Shows relationships or correlation between two variables.
 
@@ -65,7 +65,7 @@ Shows proportions of a whole.
         plt.title("Pie Chart")
         plt.show()
 
-## * Box Plot
+## Box Plot
 
 Used to display the distribution, median, and outliers of a dataset.
 
@@ -76,7 +76,7 @@ Used to display the distribution, median, and outliers of a dataset.
         plt.ylabel("Values")
         plt.show()
 
-## * Area Plot
+## Area Plot
 
 Shows cumulative totals over time.
 
