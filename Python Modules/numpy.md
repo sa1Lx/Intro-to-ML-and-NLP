@@ -18,7 +18,8 @@
         print(a[1:4]) # Slicing from index 1 to 3 (4 is excluded)
         print(a[:3]) # Slicing from start to index 2 (3 is excluded)
         print(a[::3]) # Slicing with step 3, starting from index 0
-        print(a[1:10:2]) # Slicing from index 1 to 9 with step 2
+        print(a[1:10:2]) # Slicing from index 1 to 9 with step 2 (10 is excluded)
+        print(a[-5:-1]) # Slicing from index -5 to -2 (last element is excluded)
         print(a[-3:]) # Slicing from index -3 to the end of the array
 
         b = np.array([[1, 2, 3],
@@ -83,7 +84,7 @@
         print(a**2)  # Element-wise squaring of the array
         print(a%2)  # Element-wise modulus operation
         print(a//2)  # Element-wise floor division
-        print(a**b)  # Element-wise exponentiation (a raised to the power of b)
+        print(a**b)  # Element-wise exponentiation (a raised to the power of b) 
 
 ## Universal Functions (ufuncs)
 
