@@ -145,7 +145,7 @@
 - `|` → Logical OR
 - `~` → Logical NOT
 
-Applying logical operations to arrays returns a boolean array indicating the result of the operation for each element.
+Note: Applying logical operations to arrays returns a boolean array indicating the result of the operation for each element.
 
 # Broadcasting
 
