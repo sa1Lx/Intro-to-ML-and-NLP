@@ -10,3 +10,4 @@ for row in arr:
     j-= 1
     if j < 0:
         break
+
