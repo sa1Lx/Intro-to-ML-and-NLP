@@ -149,7 +149,7 @@ Note: Applying logical operations to arrays returns a boolean array indicating t
 
 # Broadcasting
 
-## add scalar to array
+## Add Scalar to Array
 
         a = np.array([1, 2, 3])
         b = 5
