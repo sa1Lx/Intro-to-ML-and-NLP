@@ -92,7 +92,7 @@ to import numpy: `import numpy as np`
         sines = np.sin(angles)
         print(sines)
 
-# note: can use pi as np.pi, and e as np.e
+note: can use pi as np.pi, and e as np.e
 
 ## Common Vectorized (ufunc) Functions in NumPy:
 
