@@ -59,3 +59,18 @@ Scikit-learn is a powerful and widely-used open-source Python library for machin
 * Easy-to-use API: Consistent interface and integration with other Python tools make it beginner-friendly and efficient for rapid development.
 
 More about SciKit Learn at [Scikit-learn Documentation](scikit_learn.md).
+
+# NLTK
+
+NLTK (Natural Language Toolkit) is a powerful, open-source Python library designed for working with human language data, also known as natural language processing (NLP). It provides easy-to-use interfaces and tools for a wide range of text processing tasks, making it a popular choice for students, researchers, and developers interested in analyzing and understanding text.
+
+## Key Features
+* Tokenization: Splitting text into words or sentences.
+* Stopwords: Common words that are often removed from text during preprocessing.
+* Stemming and Lemmatization: Reducing words to their base or root form.
+* Part-of-Speech Tagging: Assigning grammatical categories to words.
+* Named Entity Recognition: Identifying and classifying named entities in text.
+* Text Classification: Building models to categorize text into predefined classes.
+* Sentiment Analysis: Analyzing the sentiment or emotion expressed in text.
+
+More about NLTK at [NLTK Documentation](nltk.md).
