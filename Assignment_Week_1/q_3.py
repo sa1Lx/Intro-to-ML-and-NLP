@@ -3,7 +3,7 @@ import numpy as np
 
 names = ['Amit', 'Bina', 'Chirag', 'Deepa', 'Eshan', 'Farah', 'Gopal', 'Heena', 'Iqbal', 'Jaya']
 subjects = ['Math', 'Science', 'History', 'Math', 'Science', 'History', 'Math', 'Science', 'History', 'Math']
-scores = np.random.randint(50, 101, size=10)  # random int from 50 to 100
+scores = np.random.randint(50, 101, size=10)  
 
 data = {
     'Name': names,
