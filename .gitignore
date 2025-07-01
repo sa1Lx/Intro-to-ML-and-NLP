@@ -53,3 +53,19 @@ Thumbs.db
 tmp/
 temp/
 *.tmp
+
+# models
+*.bin
+*.h5
+*.pt
+*.ckpt
+
+# huggingface trainer
+checkpoint-*/
+runs/
+logs/
+*.log
+
+# datasets
+*.arrow
+*.cache
