@@ -1,7 +1,3 @@
-# Transformers
-
-Transformers are a type of deep learning model introduced in the 2017 paper "Attention is All You Need" by Vaswani et al . They revolutionized natural language processing (NLP) and are now used in many domains like vision, speech, and more.
-
 # Recurrent Neural Networks (RNNs) 
 
 Today, different Machine Learning techniques are used to handle different types of data. One of the most difficult types of data to handle and the forecast is sequential data. Sequential data is different from other types of data in the sense that while all the features of a typical dataset can be assumed to be order-independent, this cannot be assumed for a sequential dataset. To handle such type of data, the concept of Recurrent Neural Networks was conceived. It is different from other Artificial Neural Networks in its structure. While other networks "travel" in a linear direction during the feed-forward process or the back-propagation process, the Recurrent Network follows a recurrence relation instead of a feed-forward pass and uses Back-Propagation through time to learn. 
@@ -38,7 +34,23 @@ Note that $h_0$ is the initial hidden state of the network. Typically, it is a v
 
 Video Reference: 
 
-1. Auto-Completion: RNNs can predict the next word in a sentence based on the previous words, making them useful for text input suggestions.
-2. Sentiment Analysis: RNNs can analyze the sentiment of a sequence of words, such as determining if a sentence is positive or negative.
-3. Language Translation: RNNs can translate sentences from one language to another by understanding the context and structure of the input sentence.
-4. Name Entity Recognition: RNNs can identify and classify named entities in a text, such as names of people, organizations, or locations.
+1. ***Auto-Completion(Many-to-One RNN)***: RNNs can predict the next word in a sentence based on the previous words, making them useful for text input suggestions.
+2. ***Sentiment Analysis(Many-to-One RNN)***: RNNs can analyze the sentiment of a sequence of words, such as determining if a sentence is positive or negative.
+3. ***Language Translation(Many-to-Many RNN)***: RNNs can translate sentences from one language to another by understanding the context and structure of the input sentence.
+4. ***Name Entity Recognition(Many-to-Many RNN)***: RNNs can identify and classify named entities in a text, such as names of people, organizations, or locations.
+5. ***Music Generation(One-to-Many RNN)***: RNNs can generate music by learning patterns from existing musical sequences, allowing them to create new compositions.
+
+### Some problems of Artificial Neural Networks
+
+1. ***Variable size of input and output neurons***: RNNs can handle sequences of varying lengths, making them suitable for tasks like language processing where input and output lengths can vary.
+2. ***Too much computation***: RNNs can be computationally intensive, especially for long sequences, as they need to process each time step sequentially.
+3. ***No parameter sharing***: RNNs use shared weights across time steps, which helps in capturing dependencies in sequences but can lead to challenges in training.
+
+## Bidirectional RNNs
+
+Reference: [Bidirectional RNN by GFG](https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/)
+
+Bidirectional RNNs are a type of RNN architecture that processes sequences in both forward and backward directions. This means that for each time step, the network has access to both past and future context, allowing it to make more informed predictions. In a bidirectional RNN, two separate hidden states are maintained: one for the forward pass and one for the backward pass. The final output is typically a combination of these two hidden states.
+
+Bidirectional RNNs are particularly useful for tasks where context from both directions is important, such as in language modeling, machine translation, and speech recognition. By leveraging information from both the past and future, bidirectional RNNs can achieve better performance on a variety of sequence-based tasks.
+
