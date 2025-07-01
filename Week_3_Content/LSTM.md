@@ -20,3 +20,5 @@ The basic workflow of a Long Short Term Memory Network is similar to the workflo
 
 ![image2](images/image2.png)
 
+Learn more on [GNU-RNN](https://youtu.be/tOuXgORsXJ4?si=Cv2JxQQip_lmi40h)
+
