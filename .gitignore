@@ -54,18 +54,6 @@ tmp/
 temp/
 *.tmp
 
-# models
-*.bin
-*.h5
-*.pt
-*.ckpt
-
-# huggingface trainer
-checkpoint-*/
-runs/
-logs/
-*.log
-
-# datasets
-*.arrow
-*.cache
+# Large model checkpoints
+fine_tuned_model_small_dataset/
+quick_results/
