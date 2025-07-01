@@ -1,16 +1,21 @@
 from transformers import BertTokenizer, BertForSequenceClassification, Trainer, TrainingArguments
 from datasets import load_dataset, load_metric
 import torch
+import numpy as np
 
 # Step 1: Load IMDb dataset
 dataset = load_dataset("imdb")
-print("Dataset loaded:", dataset)
 
 # Step 2: Tokenize with BERT tokenizer
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 
 def tokenize(batch):
-    return tokenizer(batch["text"], padding="max_length", truncation=True, max_length=512)
+    return tokenizer(
+        batch["text"],
+        padding="max_length",  # Pad shorter sequences
+        truncation=True,       # Cut sequences >512 tokens
+        max_length=512         # BERT's max input length
+    )
 
 tokenized_dataset = dataset.map(tokenize, batched=True)
 print("Tokenized dataset:", tokenized_dataset)
