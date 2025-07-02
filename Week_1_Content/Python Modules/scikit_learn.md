@@ -76,6 +76,11 @@ Preprocessing in Scikit-learn involves transforming raw data into a format suita
 ## Feature Scaling
 Feature Scaling is the process of normalizing or standardizing the range of independent variables (features). It ensures that no feature dominates others due to its scale.
 
+```bash
+preprocessor = 'required model'
+X_trans = preprocessor.fit_transform(X)
+```
+
 ### 1. Standardization
 Standardization rescales features to have a mean of 0 and a standard deviation of 1. It is useful when features have different units or scales.
 
@@ -97,6 +102,7 @@ X_scaled = scaler.fit_transform(X)
 
 ### 2. Min-Max Scaling
 Formula:
+
 $$
 x_{\text{scaled}} = \frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}
 $$
@@ -202,10 +208,10 @@ print(X_poly)
 ### Output:
 [[2. 3. 4. 6. 9.]]
 
-## Pipeline in SciKit Learn
+# Pipeline in SciKit Learn
 A Pipeline in scikit-learn lets you chain multiple processing steps together (like preprocessing + modeling) into one streamlined object.
 
-### Why Use a Pipeline?
+## Why Use a Pipeline?
 - Clean and readable code
 - Prevents data leakage
 
@@ -236,7 +242,7 @@ from sklearn.linear_model import LogisticRegression
 # Create a pipeline with scaling and logistic regression
 pipe = Pipeline([
     ('scaler', StandardScaler()),
-    ('classifier', LogisticRegression())
+    ('classifier', LogisticRegression()) #classifier is a model that assigns categories (classes) to data points
 ])
 
 # Example data
@@ -251,7 +257,15 @@ predictions = pipe.predict([[2, 3]])
 print(predictions)
 ```
 
-##  GridSearchCV
+The pipeline guarantees that whenever you call fit or predict, it will automatically:
+
+1. Scale the data first
+
+2. Then train (or predict) with the logistic regression
+
+This makes the code cleaner and less error-prone.
+
+#  GridSearchCV
 `GridSearchCV` stands for Grid Search with Cross-Validation.
 GridSearchCV is a tool from scikit-learn that helps you find the best settings (hyperparameters) for your machine learning model by automatically testing all combinations you specify and evaluating each one using cross-validation
 
@@ -261,7 +275,7 @@ It helps you:
 
 - Instead of guessing which settings work best, GridSearchCV tries all combinations you provide and tells you which ones perform best
 
-### How It Works
+## How It Works
 - Define Your Model: Choose the algorithm you want to use (e.g., SVC for Support Vector Classification).
 
 - Set Up a Parameter Grid: Make a dictionary listing the hyperparameters and all the values you want to try for each (e.g., {'C': [0.1, 1, 10], 'kernel': ['linear', 'rbf']}).
@@ -298,9 +312,11 @@ grid_search = GridSearchCV(
 
 - `grid.cv_results_`: Full result dictionary
 
+
+```
 from sklearn.model_selection import GridSearchCV
 from sklearn.svm import SVC
-```
+
 # Model
 model = SVC()
 
