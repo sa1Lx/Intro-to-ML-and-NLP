@@ -7,3 +7,9 @@ Continuing with the [Encoder-Decoder Architecture](Encoder_Decoder.md), the atte
 For long sentences, like T=100, it is highly probable that our context vector c is not going to be able to hold all meaningful information from the encoded sequence.
 
 We could create longer and longer context vectors but because RNNs are sequential that won’t scale up. That’s where the Attention Mechanism comes in. The idea is to create a new context vector every timestep of the decoder which attends differently to the encoded sequence. 
+
+Instead of one fixed context vector, attention lets the decoder look at all the encoder’s outputs at every step.
+The decoder decides which parts of the input are important right now.
+It assigns weights (importance scores) to each part of the input.
+Then it creates a weighted summary (context vector) based on these weights.
+This weighted summary changes at every step of the decoder.
