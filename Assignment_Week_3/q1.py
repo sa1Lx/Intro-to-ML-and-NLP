@@ -56,11 +56,12 @@ trainer = Trainer(
 
 trainer.train()
 
-# Step 7: Save the model
-model.save_pretrained("./fine_tuned_bert")
-tokenizer.save_pretrained("./fine_tuned_bert")
+model = BertForSequenceClassification.from_pretrained("E:/IITB/Learner Space 2025/Intro-to-ML-and-NLP/results/checkpoint-126")
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 
-# Step 8: Test inference
+model.save_pretrained("E:/IITB/Learner Space 2025/Intro-to-ML-and-NLP/fine_tuned_bert")
+tokenizer.save_pretrained("E:/IITB/Learner Space 2025/Intro-to-ML-and-NLP/fine_tuned_bert")
+
 sample_text = "This movie was not fantastic!"
 pipe = pipeline("text-classification", model=model, tokenizer=tokenizer)
 print("Sample prediction:", pipe(sample_text)) # Label_1: Positive, Label_0: Negative
