@@ -63,7 +63,7 @@ trainer = Trainer(
 )
 ```
 
-The model trains for 3 epochs on the training data.
+The model trains for 2 epochs on the training data.
 After each epoch, it evaluates on the test dataset and computes accuracy, f1.
 It saves the model checkpoint at the end of each epoch.
 At the end of training, it loads the best model checkpoint based on evaluation accuracy and f1.
