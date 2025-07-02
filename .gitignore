@@ -55,5 +55,8 @@ temp/
 *.tmp
 
 # Large model checkpoints
-fine_tuned_model_small_dataset/
-quick_results/
+Week_3_content/fine_tuned_model_small_dataset/
+Week_3_content/quick_results/
+results/
+fine_tuned_bert/
+
