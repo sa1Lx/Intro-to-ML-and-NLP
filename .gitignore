@@ -5,6 +5,7 @@ __pycache__/
 
 # Virtual environment
 hf_env/
+hf_env311/
 
 # Distribution / packaging
 build/
