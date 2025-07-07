@@ -1,3 +1,16 @@
+# SciKit Learn
+
+More on [SciKit Learn](https://scikit-learn.org/stable/)
+
+Some Features of SciKit Learn:
+* ***[Preprocessing](#preprocessing)***: Transforming raw data into a format suitable for machine learning models
+    - ***[Feature Scaling](#a-feature-scaling)***: Normalizing or standardizing the range of independent variables (features)
+    - ***[Quantile Transformer](#b-quantile-transformer)***: Transforming features to follow a uniform or normal distribution
+    - ***[One Hot Encoder](#c-one-hot-encoder)***: Converting categorical variables into a format that can be provided to ML algorithms
+    - ***[Polynomial Features](#d-polynomial-features)***: Generating polynomial and interaction features
+* ***[Pipelines](#pipeline-in-scikit-learn)***: Streamlining the workflow of preprocessing and model training
+* ***[Grid SearchCV](#gridsearchcv)***: Hyperparameter tuning for model optimization
+
 to install `pip install scikit-learn`<br>
 to import:
         import sklearn  # General import (rarely used alone)
@@ -73,7 +86,7 @@ to import:
 # Preprocessing
 Preprocessing in Scikit-learn involves transforming raw data into a format suitable for machine learning models. It helps improve model accuracy and performance.
 
-## Feature Scaling
+## A. Feature Scaling
 Feature Scaling is the process of normalizing or standardizing the range of independent variables (features). It ensures that no feature dominates others due to its scale.
 
 ```bash
@@ -121,7 +134,7 @@ scaler = MinMaxScaler()
 X_scaled = scaler.fit_transform(X)
 ```
 
-## Quantile Transformer
+## B. Quantile Transformer
 Quantile Transformer is used to transform features so that they follow a uniform or normal (Gaussian) distribution. It works by ranking the data and mapping it to a specified distribution.
 
 - Ranks the data.
@@ -153,7 +166,7 @@ Parameters
 
 - `n_quantiles`: Number of quantiles to compute (controls granularity and Smoothness of Data)
 
-## One Hot Encoder
+## C. One Hot Encoder
 One Hot Encoding is a technique to convert categorical variables (like colors, labels) into a binary numeric format suitable for machine learning models.
 
 ### Why use One Hot Encoding?
@@ -186,7 +199,7 @@ print(encoded_data)
  [0. 1. 0.]   # 'green'
  [1. 0. 0.]]  # 'blue'
 ```
-## Polynomial Features
+## D. Polynomial Features
 Polynomial Features allow machine learning models to capture non-linear relationships by adding polynomial terms and interaction terms to the original features.
 Ex:
  $$

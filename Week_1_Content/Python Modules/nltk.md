@@ -1,10 +1,18 @@
 # NLTK
-NLTK is a leading Python library for working with human language data (text). It provides easy-to-use interfaces for over 50 corpora and lexical resources, and powerful tools for text processing.
+
+NLTK is a leading Python library for working with human language data (text). It provides easy-to-use interfaces for over 50 corpora and lexical resources, and powerful tools for text processing. NLTK can be used for tasks like:
+
+* ***[Tokenization](#1-tokenization)***: Splitting text into words or sentences.
+* ***[Stop-word removal](#2-stop-words)***: Filtering out common words that add little meaning.
+* ***[Stemming and lemmatization](#3-stemming)***: Reducing words to their base or root form.
+* ***[Part-of-speech (POS) tagging](#5-pos-tagging)***: Assigning grammatical labels to words.
+* ***[Named entity recognition](#6-named-entity-recognisation)***: Identifying and classifying key information in text.
+
 ## Features of NLTK
 ## 1. Tokenization
 Tokenization is the process of splitting text into smaller units such as words or sentences.
 Types of Tokenization in NLTK:
-### 1. Word Tokenization
+### a. Word Tokenization
 Splits text into individual words and punctuation.
 
 ```
@@ -20,7 +28,7 @@ print(tokens)
 
 ⚠️ Requires: nltk.download('punkt')
 
-### 2. Sentence Tokenization
+### b. Sentence Tokenization
 Splits text into sentences.
 
 ```
@@ -33,7 +41,7 @@ print(sentences)
 ### Output: 
 ['Hello there.', 'How are you doing?', "I hope you're well."]
 
-### 3. Regexp Tokenizer
+### c. Regexp Tokenizer
 Use regular expressions to define your own rules.
 ```
 from nltk.tokenize import regexp_tokenize
@@ -50,18 +58,18 @@ Stopwords are common words that carry little meaningful information, such as:
 "is", "the", "and", "in", "to" etc.
 They're often removed in text preprocessing.
 
- ### 1. Import and Download Stopwords
+ ### a. Import and Download Stopwords
 ```
 import nltk
 from nltk.corpus import stopwords
 nltk.download('stopwords')
 ```
-### 2. Get Stopwords List (e.g., English)
+### b. Get Stopwords List (e.g., English)
 ```
 stop_words = set(stopwords.words('english'))
 print(stop_words)
 ```
-### 3. Remove Stopwords from a Text
+### c. Remove Stopwords from a Text
 ```
 from nltk.tokenize import word_tokenize
 nltk.download('punkt')
@@ -77,10 +85,10 @@ print(filtered)
 ['example', 'showing', 'stop', 'word', 'filtering', '.']
 ```
 
-## Stemming
+## 3. Stemming
 Stemming is the process of reducing a word to its base or root form (stem), usually by chopping off suffixes.
 
-### PorterStemmer
+### a. PorterStemmer
 ```
 from nltk.stem import PorterStemmer
 
@@ -94,7 +102,7 @@ print(stems)
 
 ['play', 'play', 'player', 'play']
 
-### SnowballStemmer
+### b. SnowballStemmer
 Better and supports many language
 ```
 from nltk.stem import SnowballStemmer
@@ -105,7 +113,7 @@ print(snowball.stem("running"))  # → 'run'
 ### Output:
 run
 
-### Stemming with Regex
+### c. Stemming with Regex
 Normally, stemming is done using NLP algorithms (like PorterStemmer). But you can mimic a very simple stemmer using regex by removing common suffixes (like -ing, -ed, -s) from words.
 
 This is not true stemming, but it's a rough shortcut.
@@ -124,7 +132,7 @@ print(stems)
 ### Output:
 ['play', 'play', 'play', 'player', 'jump']
 
-## Lemmatizer
+## 4. Lemmatizer
 Lemmatization reduces a word to its base form (lemma), but uses vocabulary and grammar rules, so the result is a real word.
 
 ```
@@ -145,7 +153,7 @@ Otherwise, it assumes it's a noun by default. That is why it is neccesary to men
 | Adjective | `"a"` |
 | Adverb    | `"r"` |
 
-## POS Tagging
+## 5. POS Tagging
 Part-of-Speech (POS) tagging assigns a grammatical label (noun, verb, adjective, etc.) to each word in a sentence.
 
 ```
@@ -175,7 +183,7 @@ print(tags)
 | `VBZ` | Verb (3rd pers.) | eats       |
 | `PRP` | Pronoun          | she, he    |
 
-## Named Entity Recognisation
+## 6. Named Entity Recognisation
 ### What is Named Entity Recognition (NER)?
 NER is about finding real-world entities in text, like:
 
@@ -228,8 +236,8 @@ print(named_entities)
   the/DT
   (GPE United/NNP States/NNPS)
   ./.)
-  ```
-  ### Drawing A graph
+```
+### Drawing A graph
 ```
 import nltk
 from nltk import word_tokenize, pos_tag, ne_chunk

@@ -1,3 +1,14 @@
+# Pandas
+
+More about Pandas at [Pandas by GFG](https://www.geeksforgeeks.org/pandas-python-tutorial/).
+
+Some Features of Pandas:
+* ***[Series](#panda-series)***: One-dimensional labeled array.
+* ***[DataFrame](#panda-dataframe)***: Two-dimensional labeled data structure (like a table).
+* ***[Data Handling](#reading-files-with-pandas)***: Importing and exporting data from various formats (CSV, Excel, SQL, JSON).  
+* ***[Data Manipulation](#writing-to-files-in-python)***: Filtering, sorting, grouping, and aggregation.
+
+
 `pip install pandas` to install pandas  
 `import pandas as pd` to import pandas
 

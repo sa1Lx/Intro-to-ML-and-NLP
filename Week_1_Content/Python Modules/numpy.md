@@ -1,3 +1,18 @@
+# NumPy
+
+More about NumPy at [NumPy by GFG](https://www.geeksforgeeks.org/numpy/python-numpy/)
+
+Some Features of NumPy:
+
+* ***[Arrays](#arrays-in-numpy)***: Provides support for large multi-dimensional arrays and matrices.
+* ***[Slicing](#slicing-in-arrays)***: Allows for easy slicing and indexing of arrays.
+* ***[Commonly used functions](#commonly-used-functions-in-numpy)***: Functions like `reshape()`, `arange()`, `eye()`, and more for array manipulation.
+* ***[Vectorized functions](#numpy-vectorised-functions)***: Supports element-wise operations and universal functions (ufuncs).
+* ***[Statistical functions](#statistical-functions-in-numpy)***: Functions like `mean()`, `median()`, `std()`, and more for statistical analysis.
+* ***[Logical operations](#logical-operations)***: Supports element-wise logical operations.
+* ***[Broadcasting](#broadcasting)***: Allows for arithmetic operations between arrays of different shapes.
+
+
 to install numpy: `pip install numpy`<br>
 to import numpy: `import numpy as np`
 

@@ -1,3 +1,10 @@
+# Matplotlib
+
+More on Matplotlib at [Matplotlib by GFG](https://www.geeksforgeeks.org/matplotlib-tutorial-python-visualization-library/).
+
+Matplotlib allows to plot data into ***[Line plots](#line-plot)***, ***[Bar plots](#bar-plot)***, ***[Histograms](#histogram)***, ***[Scatter plots](#scatter-plot)***, ***[Pie charts](#pie-chart)***, ***[Box plots](#box-plot)***, and ***[Area plots](#area-plot)***.
+
+
 to install `pip install matplotlib`<br>
 to import `import matplotlib.pyplot as plt`
 
