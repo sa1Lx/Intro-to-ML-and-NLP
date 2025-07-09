@@ -56,12 +56,10 @@ temp/
 *.tmp
 
 # Large model checkpoints
-Week_3_Content\fine_tuned_model_small_dataset/
+Week_3_Content/fine_tuned_model_small_dataset/
 Week_3_content/quick_results/
 results/
 fine_tuned_bert/
-Week_4_Final_Project/gpt2-finetuned-nwp
-Week_4_Final_Project/NWP_results
-Week_4_Final_Project/dummy
-
+Week_4_Final_Project/NWP_final_results
+Week_4_Final_Project/gpt2-finetuned-nwp-final
 

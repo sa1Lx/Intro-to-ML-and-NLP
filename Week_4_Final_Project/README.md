@@ -32,6 +32,8 @@ Design and train a transformer-based language model to predict the next word in 
 
 ## Explanation of the Code
 
+NOTE: Trained model has been saved locally and hence unable to share the model weights. You can run the code in this file to train the model on your local machine.
+
 ### 1. Loading the Dataset
 
  [`Datasets`](https://huggingface.co/docs/datasets/en/index): Datasets is a library for easily accessing and sharing datasets for Audio, Computer Vision, and Natural Language Processing (NLP) tasks.
@@ -74,7 +76,7 @@ Also, something interesting I found about GPT-2, [here](https://huggingface.co/o
 tokenizer.pad_token = tokenizer.eos_token  # Set the pad token to the end of sentence token
 
 def tokenize(examples):
-    return tokenizer(examples["text"], padding="max_length", truncation=True)
+    return tokenizer(examples["text"], max_length=256, padding="max_length", truncation=True) # shorter lengths means smaller tensors and faster training, but also less context for the model to learn from.
 
 tokenized_dataset = ds.map(tokenize, batched=True)
 ```
@@ -91,24 +93,36 @@ I am using the [`Trainer`](https://huggingface.co/docs/transformers/main_classes
 from transformers import Trainer, TrainingArguments, DataCollatorForLanguageModeling
 
 data_collator = DataCollatorForLanguageModeling(
-    tokenizer=tokenizer, mlm=False #GPT is a causal LM, no masking. 
+    tokenizer=tokenizer, mlm=False
 )
 
 training_args = TrainingArguments(
-    output_dir="./NWP_results", # save model predictions and checkpoints
-    eval_strategy="epoch", # Evaluate at the end of each epoch
-    num_train_epochs=3, # Number of training epochs
-    per_device_train_batch_size=2, # Batch size per device during training
-    learning_rate=5e-5, # Learning rate for the optimizer
+    output_dir="./NWP_final_results",
+    eval_strategy="epoch",
+    num_train_epochs=2,
+    per_device_train_batch_size=4,
+    gradient_accumulation_steps=8,
+    learning_rate=5e-5,
+    fp16=True,
 )
 
 trainer = Trainer(
-    model=model, # The model to train
-    args=training_args, # Training arguments
-    train_dataset=tokenized_dataset["train"], # Training dataset
-    eval_dataset=tokenized_dataset["validation"], # Evaluation dataset
-    data_collator=data_collator, # Data collator for batching
+    model=model,
+    args=training_args,
+    train_dataset=tokenized_dataset["train"],
+    eval_dataset=tokenized_dataset["validation"],
+    data_collator=data_collator,
 )
 
 trainer.train()
 ```
+
+### 5. Saving the Model
+
+```python
+model.save_pretrained("./gpt2-finetuned-nwp-final")
+tokenizer.save_pretrained("./gpt2-finetuned-nwp-final")
+```
+
+### 6. Evaluation
+
