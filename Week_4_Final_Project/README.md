@@ -65,5 +65,50 @@ tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2")
 # This loads the pre-trained GPT-2 model and its tokenizer.
 ```
 
+About the Model: [GPT-2](https://huggingface.co/openai-community/gpt2) is a transformers model pretrained on a very large corpus of English data in a self-supervised fashion. This means it was pretrained on the raw texts only, with no humans labelling them in any way (which is why it can use lots of publicly available data) with an automatic process to generate inputs and labels from those texts. More precisely, it was trained to guess the next word in sentences. This is the smallest version of GPT-2, with 124M parameters.<br>
+Also, something interesting I found about GPT-2, [here](https://huggingface.co/openai-community/gpt2#limitations-and-bias).
+
 ### 3. Tokenization
 
+```python
+tokenizer.pad_token = tokenizer.eos_token  # Set the pad token to the end of sentence token
+
+def tokenize(examples):
+    return tokenizer(examples["text"], padding="max_length", truncation=True)
+
+tokenized_dataset = ds.map(tokenize, batched=True)
+```
+
+### 4. Training the Model
+
+I am using the [`Trainer`](https://huggingface.co/docs/transformers/main_classes/trainer) API for training.
+
+* `data_collator`: This is used to collate the data into batches. For language modeling, we typically use `DataCollatorForLanguageModeling` which handles padding and masking for the model. MLM (Masked Language Modeling) is for BERT-style models, where you randomly hide words to predict.
+
+* `TrainingArguments`: This is where you specify the training parameters like output directory, evaluation strategy, number of epochs, batch size, and learning rate.
+
+```python
+from transformers import Trainer, TrainingArguments, DataCollatorForLanguageModeling
+
+data_collator = DataCollatorForLanguageModeling(
+    tokenizer=tokenizer, mlm=False #GPT is a causal LM, no masking. 
+)
+
+training_args = TrainingArguments(
+    output_dir="./NWP_results", # save model predictions and checkpoints
+    eval_strategy="epoch", # Evaluate at the end of each epoch
+    num_train_epochs=3, # Number of training epochs
+    per_device_train_batch_size=2, # Batch size per device during training
+    learning_rate=5e-5, # Learning rate for the optimizer
+)
+
+trainer = Trainer(
+    model=model, # The model to train
+    args=training_args, # Training arguments
+    train_dataset=tokenized_dataset["train"], # Training dataset
+    eval_dataset=tokenized_dataset["validation"], # Evaluation dataset
+    data_collator=data_collator, # Data collator for batching
+)
+
+trainer.train()
+```
