@@ -126,3 +126,13 @@ tokenizer.save_pretrained("./gpt2-finetuned-nwp-final")
 
 ### 6. Evaluation
 
+
+### 7. Streamlit App
+
+Finally I made it interactive using Streamlit. The app allows users to input a prompt and generate text. Here is a screenshot of the app:
+
+![Streamlit App Screenshot](./images/image1.png)
+
+I do think since I trained it on few token size, it is not good at generating tokens of length more than 7-8 (start of the sentence makes sense but then doesnt), lol. Here is an example: (ui looks different since this was my first iteration using the streamlit)
+
+![Streamlit App Example](./images/image2.png)
