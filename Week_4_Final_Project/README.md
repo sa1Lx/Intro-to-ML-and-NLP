@@ -32,6 +32,8 @@ Design and train a transformer-based language model to predict the next word in 
 
 ## Explanation of the Code
 
+Refer to [final_project](./final_project.ipynb) for the training snippet.
+
 NOTE: Trained model has been saved locally and hence unable to share the model weights. You can run the code in this file to train the model on your local machine.
 
 ### 1. Loading the Dataset
@@ -126,6 +128,7 @@ tokenizer.save_pretrained("./gpt2-finetuned-nwp-final")
 
 ### 6. Evaluation
 
+Evaluation has been implemented in the file [evaluation.ipynb](evaluation.ipynb). The evaluation metrics used are perplexity and top-k accuracy.
 
 ### 7. Streamlit App
 
@@ -133,6 +136,7 @@ Finally I made it interactive using Streamlit. The app allows users to input a p
 
 ![Streamlit App Screenshot](./images/image1.png)
 
-I do think since I trained it on few token size, it is not good at generating tokens of length more than 7-8 (start of the sentence makes sense but then doesnt), lol. Here is an example: (ui looks different since this was my first iteration using the streamlit)
+
+P.S- I do think since I trained it on few token size, it is not good at generating tokens of length more than 7-8 (start of the sentence makes sense but then doesnt), lol. Here is an example: (ui looks different since this was my first iteration using the streamlit)
 
 ![Streamlit App Example](./images/image2.png)

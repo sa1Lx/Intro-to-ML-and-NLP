@@ -2,9 +2,7 @@ import streamlit as st
 from transformers import GPT2LMHeadModel, AutoTokenizer
 import torch
 
-# streamlit run "e:\IITB\Learner Space 2025\Intro-to-ML-and-NLP\Week_4_Final_Project\streamlit_nwp.py"
-
-# Load your fine-tuned model
+# Loading the model and tokenizer
 @st.cache_resource
 def load_model():
     model_path = "./Week_4_Final_Project/gpt2-finetuned-nwp-final"

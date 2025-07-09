@@ -85,9 +85,6 @@ from sklearn.metrics import top_k_accuracy_score
 import torch
 import numpy as np
 import math
-from evaluate import load
-
-perplexity_metric = load("perplexity")
 
 def compute_metrics(eval_pred):
     logits, labels = eval_pred
@@ -105,20 +102,10 @@ def compute_metrics(eval_pred):
     y_true = shift_labels[valid].numpy()
     y_pred = shift_logits[valid].numpy()
 
-    # Perplexity (cross-entropy)
-    loss_fct = torch.nn.CrossEntropyLoss()
-    loss = loss_fct(torch.tensor(y_pred), torch.tensor(y_true))
-    perplexity = math.exp(loss.item())
-
     # Top-k accuracy
     topk_acc = top_k_accuracy_score(y_true, y_pred, k=5, labels=list(range(50257))) # GPT-2 vocab size is 50257
 
-    # perplexity
-
-    results = perplexity_metric.compute(predictions=y_pred, references=y_true)
-
     return {
-        "perplexity": perplexity,
         "top5_accuracy": topk_acc
     }
 
