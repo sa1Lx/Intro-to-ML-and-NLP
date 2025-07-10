@@ -60,7 +60,7 @@ Deep Learning & Modern NLP
     * [Attention Mechanism](Week_3_Content/Transformers/Attention_Mechanism.md)
     * [Transformer Architecture](Week_3_Content/Transformers/Transformers.md)
 
-  - [Hugging Face Library](Week_3_Content/Hugging Face/)
+  - [Hugging Face Library](Week_3_Content/Hugging%20Face%20Library/)
     * Using the transformers library.
     * Tokenization, loading pretrained models, pipelines (e.g., pipeline('sentiment-analysis')).
     * Fine-tuning on custom data using Trainer API.
