@@ -3,8 +3,8 @@
 ## About this Repository
 
 This repository was developed by [sa1Lx](https://github.com/sa1Lx) as part of the "Introduction to Machine Learning and Natural Language Processing" course offered by IIT Bombay Learner Space. It contains well-documented implementations of core [NLP and ML concepts](#course-structure), including 2 major projects:
-* A Next Word Prediction model using GPT-2
-* A Sentiment Analysis model using BERT
+* [A Next Word Prediction model using GPT-2](Week_4_Final_Project/)
+* [A Sentiment Analysis model using BERT](Assignment_Week_3/Sentiment%20Classifier_BERT/)
 
 The repository is intended as both a learning archive and a reference for anyone looking to understand and build foundational NLP applications.
 
@@ -69,7 +69,7 @@ Deep Learning & Modern NLP
     * Understanding GANs and their applications in NLP.
     * Differences between GANs and traditional models.
 
-  - Bonus: Diffusion in NLP
+  - Bonus: Diffusion in NLP [TBD]
     Overview of Diffusion Models.
     How these are adapted for text generation.
 
