@@ -10,62 +10,62 @@ The repository is intended as both a learning archive and a reference for anyone
 
 # Course Structure
 
-## [Week 1](Week_1_Content/)
+## [Week 1](<Week 1/>)
 
 Foundations of NLP & Data Processing
 
-- [Python Libraries](Week_1_Content/Python%20Modules/)
+- [Python Libraries](<Week 1/Python%20Modules/>)
 
-  * [NumPy](Week_1_Content/Python%20Modules/numpy.md)
-  * [Pandas](Week_1_Content/Python%20Modules/pandas.md)
-  * [Matplotlib](Week_1_Content/Python%20Modules/matplotlib.md)
-  * [Scikit-learn](Week_1_Content/Python%20Modules/scikit_learn.md)
-  * [NLTK](Week_1_Content/Python%20Modules/nltk.md)
+  * [NumPy](<Week 1/Python%20Modules/numpy.md>)
+  * [Pandas](<Week 1/Python%20Modules/pandas.md>)
+  * [Matplotlib](<Week 1/Python%20Modules/matplotlib.md>)
+  * [Scikit-learn](<Week 1\Python Modules\scikit_learn.md>)
+  * [NLTK](<Week 1/Python%20Modules/nltk.md>)
 
-- [Regex (Regular Expressions)](Week_1_Content/Regex/regex.md)  
+- [Regex (Regular Expressions)](<Week 1/Regex/regex.md>)
 
-- [Introduction to NLP](Week_1_Content/NLP%20Pipeline/nlp_pipeline.md)
-    * Tokenization 
+- [Introduction to NLP](<Week 1/NLP%20Pipeline/nlp_pipeline.md>)
+    * Tokenization
     * Preprocessing 
     * Vectorization 
     * Modeling
     * Evaluation  
 
-## Week 2
+## [Week 2](<Week 2/>)
 
 Classical NLP Modeling
 
-  - Text Vectorization  
-    TF-IDF (Term Frequency-Inverse Document Frequency):  
-    Concept of bag-of-words vs TF-IDF.  
+  - [Text Vectorization](<Week 2/Text%20Vectorization/>)  
+      * [Bag of Words (BoW)](<Week 2/Text%20Vectorization/CountVectorizer.ipynb>)
+      * [TF-IDF](<Week 2/Text%20Vectorization/TfidfVectorizer.ipynb>)
 
-  - Logistic Regression for Text Classification  
-    Training and evaluating a classifier for sentiment analysis or spam detection.  
-    Metrics: Accuracy, Precision, Recall, F1-score.  
-    Hands-on: train a TF-IDF + Logistic Regression model.  
+  - [Logistic Regression for Text Classification](<Week 2/Logistic%20Regression%20for%20Text%20Classification/>)
+    * Training and evaluating a classifier for sentiment analysis or spam detection.
+    * Metrics: Accuracy, Precision, Recall, F1-score.  
+    * Hands-on: train a TF-IDF + Logistic Regression model.  
 
-  - Word & Sentence Embeddings  
-    Limitations of one-hot and TF-IDF.  
-    Word2Vec, GloVe, and FastText.  
-    Sentence embeddings (e.g., Sentence-BERT).  
+  - [Word & Sentence Embeddings](<Week 2/Word%20&%20Sentence%20Embeddings/>)
+    * Limitations of one-hot and TF-IDF.  
+    * Word2Vec, GloVe, and FastText.  
+    * Sentence embeddings (e.g., Sentence-BERT).  
 
-## [Week 3](Week_3_Content/)
+## [Week 3](<Week 3/>)
 
 Deep Learning & Modern NLP
 
-  - [Transformers](Week_3_Content/Transformers)
-    * [RNN](Week_3_Content/Transformers/RNN.md)
-    * [LSTM](Week_3_Content/Transformers/LSTM.md)
-    * [Encoder-Decoder Architecture](Week_3_Content/Transformers/Encoder_Decoder.md)
-    * [Attention Mechanism](Week_3_Content/Transformers/Attention_Mechanism.md)
-    * [Transformer Architecture](Week_3_Content/Transformers/Transformers.md)
+  - [Transformers](<Week 3/Transformers/>)
+    * [RNN](<Week 3/Transformers/RNN.md>)
+    * [LSTM](<Week 3/Transformers/LSTM.md>)
+    * [Encoder-Decoder Architecture](<Week 3/Transformers/Encoder_Decoder.md>)
+    * [Attention Mechanism](<Week 3/Transformers/Attention_Mechanism.md>)
+    * [Transformer Architecture](<Week 3/Transformers/Transformers.md>)
 
-  - [Hugging Face Library](Week_3_Content/Hugging%20Face%20Library/)
+  - [Hugging Face Library](<Week 3/Hugging%20Face%20Library/>)
     * Using the transformers library.
     * Tokenization, loading pretrained models, pipelines (e.g., pipeline('sentiment-analysis')).
     * Fine-tuning on custom data using Trainer API.
 
-  - [Overview of Generative Adversarial Networks](Week_3_Content/GAN/GAN.md)
+  - [Overview of Generative Adversarial Networks](<Week 3/GAN/GAN.md>)
     * Understanding GANs and their applications in NLP.
     * Differences between GANs and traditional models.
 
