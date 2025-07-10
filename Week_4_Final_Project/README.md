@@ -32,7 +32,7 @@ Design and train a transformer-based language model to predict the next word in 
 
 ## Explanation of the Code
 
-Refer to [final_project](./final_project.ipynb) for the training snippet.
+Refer to [model_training.ipynb](./model_training.ipynb) for the training snippet.
 
 NOTE: Trained model has been saved locally and hence unable to share the model weights. You can run the code in this file to train the model on your local machine.
 
@@ -128,7 +128,7 @@ tokenizer.save_pretrained("./gpt2-finetuned-nwp-final")
 
 ### 6. Evaluation
 
-Evaluation has been implemented in the file [evaluation.ipynb](evaluation.ipynb). The evaluation metrics used are perplexity and top-k accuracy.
+Evaluation has been implemented in the file [model_evaluation.ipynb](model_evaluation.ipynb). The evaluation metrics used are perplexity and top-k accuracy.
 
 ### 7. Streamlit App
 
