@@ -1,83 +1,80 @@
 # Intro-to-ML-and-NLP
-Learner Space course under Web and Coding Club (WnCC), IIT Bombay
 
-# Course Overview
-This comprehensive course blends the power of Machine Learning (ML) with the language understanding capabilities of Natural Language Processing (NLP). Designed for aspiring AI engineers, data scientists, and developers, the course begins with the core principles of ML and gradually transitions into the specialized world of NLP.
+## About this Repository
 
-Exploring python libraries and the core building blocks of NLP: tokenization, stemming, lemmatization, part-of-speech tagging, and named entity recognition.
+This repository was developed by [sa1Lx](https://github.com/sa1Lx) as part of the "Introduction to Machine Learning and Natural Language Processing" course offered by IIT Bombay Learner Space. It contains well-documented implementations of core [NLP and ML concepts](#course-structure), including 2 major projects:
+* A Next Word Prediction model using GPT-2
+* A Sentiment Analysis model using BERT
 
-As the course progresses, there will be diving into deep learning for NLP, understanding recurrent neural networks (RNNs), LSTMs. From there, we transition into the world of Transformers covering key models like BERT.
-
-Using the Hugging Face ecosystem, gaining hands-on experience in fine-tuning pre-trained models for downstream tasks such as sentiment analysis, text classification, question answering, and summarization. The course also introduces Generative Adversarial Networks (GANs) applied to text generation—a challenging and emerging area in NLP.
-
-Throughout the course, will be working on real-world projects that reinforce learning and prepare you for building production-ready NLP applications.
+The repository is intended as both a learning archive and a reference for anyone looking to understand and build foundational NLP applications.
 
 # Course Structure
 
-## Week 1
+## [Week 1](Week_1_Content/)
 
-  Foundations of NLP & Data Processing
+Foundations of NLP & Data Processing
 
-    -> Python Libraries  
-    NumPy: Numerical operations (arrays, broadcasting, vectorized math).  
-    Pandas: Data handling (Series, DataFrames, handling text columns).  
-    Matplotlib: Data visualization (line plots, bar charts, histograms).
-    Scikit-learn: Machine learning library (train-test split, metrics).
-    NLTK: Natural Language Toolkit (tokenization, stemming, lemmatization). 
+- [Python Libraries](Week_1_Content/Python%20Modules/)
 
-    -> Regex (Regular Expressions)  
-    Basics: pattern matching, wildcards, quantifiers.  
-    Practice with Python’s re module.  
+  * [NumPy](Week_1_Content/Python%20Modules/numpy.md)
+  * [Pandas](Week_1_Content/Python%20Modules/pandas.md)
+  * [Matplotlib](Week_1_Content/Python%20Modules/matplotlib.md)
+  * [Scikit-learn](Week_1_Content/Python%20Modules/scikit_learn.md)
+  * [NLTK](Week_1_Content/Python%20Modules/nltk.md)
 
-    -> Introduction to NLP  
-    NLP pipeline overview: tokenization, preprocessing, vectorization, modeling, evaluation.  
+- [Regex (Regular Expressions)](Week_1_Content/Regex/regex.md)  
+
+- [Introduction to NLP](Week_1_Content/NLP%20Pipeline/nlp_pipeline.md)
+    * Tokenization 
+    * Preprocessing 
+    * Vectorization 
+    * Modeling
+    * Evaluation  
 
 ## Week 2
 
-  Classical NLP Modeling
+Classical NLP Modeling
 
-    -> Text Vectorization  
+  - Text Vectorization  
     TF-IDF (Term Frequency-Inverse Document Frequency):  
     Concept of bag-of-words vs TF-IDF.  
 
-    -> Logistic Regression for Text Classification  
+  - Logistic Regression for Text Classification  
     Training and evaluating a classifier for sentiment analysis or spam detection.  
     Metrics: Accuracy, Precision, Recall, F1-score.  
     Hands-on: train a TF-IDF + Logistic Regression model.  
 
-    -> Word & Sentence Embeddings  
+  - Word & Sentence Embeddings  
     Limitations of one-hot and TF-IDF.  
     Word2Vec, GloVe, and FastText.  
     Sentence embeddings (e.g., Sentence-BERT).  
 
-## Week 3
+## [Week 3](Week_3_Content/)
 
-  Deep Learning & Modern NLP
+Deep Learning & Modern NLP
 
-    -> Transformers
-    The transformer architecture (attention mechanism, encoder-decoder blocks).
-    Key models: BERT, GPT, RoBERTa, etc.
-    Pretraining vs fine-tuning.
+  - Transformers
+    * [RNN](Week_3_Content/RNN.md)
+    * [LSTM](Week_3_Content/LSTM.md)
+    * [Encoder-Decoder Architecture](Week_3_Content/Encoder_Decoder.md)
+    * [Attention Mechanism](Week_3_Content/Attention_Mechanism.md)
+    * [Transformer Architecture](Week_3_Content/Transformers.md)
 
-    -> Hugging Face Library
+  - [Hugging Face Library](Week_3_Content/Hugging_Face.md)
     Using the transformers library.
     Tokenization, loading pretrained models, pipelines (e.g., pipeline('sentiment-analysis')).
     Fine-tuning on custom data using Trainer API.
 
-    -> Overview of Generative Adversarial Networks
+  - [Overview of Generative Adversarial Networks](Week_3_Content/GAN.md)
 
-    -> Bonus: Diffusion in NLP
+  - Bonus: Diffusion in NLP
     Overview of Diffusion Models.
     How these are adapted for text generation.
 
-## Week 4
+## [Week 4](Week_4_Final_Project/)
 
-  Final Project
-
-    -> Final NLP Project  
-
-    -> Wrap-Up & Beyond  
-    Recap of all topics.  
-    Where to go next? (e.g., LLMs, fine-tuning techniques, Reinforcement Learning for NLP)  
+  - Final Project
+      * Problem Statement: Implementation of a Next Word Prediction Model using GPT-2.
+      * Frontend using Streamlit.
 
 
