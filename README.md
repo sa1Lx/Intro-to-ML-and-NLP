@@ -53,19 +53,21 @@ Classical NLP Modeling
 
 Deep Learning & Modern NLP
 
-  - Transformers
-    * [RNN](Week_3_Content/RNN.md)
-    * [LSTM](Week_3_Content/LSTM.md)
-    * [Encoder-Decoder Architecture](Week_3_Content/Encoder_Decoder.md)
-    * [Attention Mechanism](Week_3_Content/Attention_Mechanism.md)
-    * [Transformer Architecture](Week_3_Content/Transformers.md)
+  - [Transformers](Week_3_Content/Transformers)
+    * [RNN](Week_3_Content/Transformers/RNN.md)
+    * [LSTM](Week_3_Content/Transformers/LSTM.md)
+    * [Encoder-Decoder Architecture](Week_3_Content/Transformers/Encoder_Decoder.md)
+    * [Attention Mechanism](Week_3_Content/Transformers/Attention_Mechanism.md)
+    * [Transformer Architecture](Week_3_Content/Transformers/Transformers.md)
 
-  - [Hugging Face Library](Week_3_Content/Hugging_Face.md)
-    Using the transformers library.
-    Tokenization, loading pretrained models, pipelines (e.g., pipeline('sentiment-analysis')).
-    Fine-tuning on custom data using Trainer API.
+  - [Hugging Face Library](Week_3_Content/Hugging Face/)
+    * Using the transformers library.
+    * Tokenization, loading pretrained models, pipelines (e.g., pipeline('sentiment-analysis')).
+    * Fine-tuning on custom data using Trainer API.
 
-  - [Overview of Generative Adversarial Networks](Week_3_Content/GAN.md)
+  - [Overview of Generative Adversarial Networks](Week_3_Content/GAN/GAN.md)
+    * Understanding GANs and their applications in NLP.
+    * Differences between GANs and traditional models.
 
   - Bonus: Diffusion in NLP
     Overview of Diffusion Models.
